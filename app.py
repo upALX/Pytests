@@ -7,19 +7,22 @@ class Account:
 
 
     def extrato(self):
-        print('Seu saldo é de {:.f3}.'.format(self.__balance))
+        print('Seu saldo é de {}.'.format(self.__balance))
 
 
     def deposita(self, value_dep):
         self.__balance += value_dep
-        print('Seu saldo ficou em {:.f3}'.format(self.__balance))
+        print('Seu saldo ficou em {}'.format(self.__balance))
 
 
     def saque(self, value_saq):
         self.__balance -= value_saq
-        print('Seu saldo ficou em {:.f3}'.format(self.__balance))
+        print('Seu saldo ficou em {}'.format(self.__balance))
 
 
+    def transaction(self, value_transfer, account_destiny):
+        self.saque(value_transfer)
+        account_destiny.deposita(value_transfer)
 
 
 
