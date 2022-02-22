@@ -20,16 +20,17 @@ class Account:
         account_destiny.deposita(value_transfer)
 
 
+    @property
+    def account(self):
+        return self.__account
+
+
     def get_balance(self):
         return self.__balance
 
 
     def get_titular(self):
         return self.__titular
-
-
-    def get_account(self):
-        return self.__account
 
 
     def get_limit(self):
