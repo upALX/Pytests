@@ -5,11 +5,6 @@ class Account:
         self.__balance = user_balance
         self.__limit = user_limit
 
-
-    def extrato(self):
-        print('Seu saldo é de {}.'.format(self.__balance))
-
-
     def deposita(self, value_dep):
         self.__balance += value_dep
         print('Seu saldo ficou em {}'.format(self.__balance))
@@ -25,13 +20,23 @@ class Account:
         account_destiny.deposita(value_transfer)
 
 
+    def get_balance(self):
+        return self.__balance
 
 
+    def get_titular(self):
+        return self.__titular
 
 
+    def get_account(self):
+        return self.__account
 
 
+    def get_limit(self):
+        return self.__limit
 
+    def set_limit(self, value_new_limit):
+        self.__limit = value_new_limit
 
 
 
